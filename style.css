@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(176, 250, 224);
+  margin: auto;
+
+  width: 100%;
+}
+
+.content {
+  background-color: aliceblue;
+}
+img {
+  width: 200px;
+  height: 150px;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  align-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 3%;
+}
+
+.country-selector {
+  margin: 20px;
+}
