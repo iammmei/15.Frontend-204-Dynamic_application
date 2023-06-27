@@ -4,18 +4,25 @@
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather <Applet></Applet></title>
+    <title>Weather App </title>
 </head>
 <body>
-    <div class="all">
+    <div class="container">
+
         <header>
+        
             <h1> Weather App </h1>
 
         </header>
 
-        <section>
+        
+
+        <section class="main">
 
             <div class="country-selector">
+                <input type="text" placeholder="Enter any city..." id="cityinput">
+                <input type="submit" value="Submit" id="add">
+                
 
                 <select>
 
@@ -65,8 +72,21 @@
                     <option value="Yemen">Yemen</option>
 
                   </select>
-                  
-                    <button id="enter">ENTER </button>
+
+                    <button id="submit" placeholder="submit"> Submit  </button>
+
+
+            </div>
+
+            <div class="display">
+
+                <div class="wrapper">
+                    <h2 class="cityOutput"></h2>
+                    <img src="" alt="city">
+                    <p class="temperature"></p>
+                    <p class="sky"></p>
+                    
+                </div>
             </div>
 
 
