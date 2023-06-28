@@ -7,7 +7,7 @@ const sky = document.querySelector(".sky");
 const tableRows = document.querySelectorAll("tbody tr");
 
 const apiKey = "9099dad86f1f69e0190cade738d1385a";
-
+const imgkey = "gJflep4IMFN_9segkWrtGb0jHctbGXBMsEeGCxHgfm4";
 // Function to convert temperature from Kelvin to Celsius
 function convertion(val) {
   return (val - 273).toFixed(2);
