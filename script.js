@@ -7,7 +7,9 @@ const sky = document.querySelector(".sky");
 const tableRows = document.querySelectorAll("tbody tr");
 
 const apiKey = "9099dad86f1f69e0190cade738d1385a";
-const imgkey = "gJflep4IMFN_9segkWrtGb0jHctbGXBMsEeGCxHgfm4";
+const unsplashApiKey = "gJflep4IMFN_9segkWrtGb0jHctbGXBMsEeGCxHgfm4";
+const unsplashBaseUrl = "https://api.unsplash.com/photos/random?query=";
+
 // Function to convert temperature from Kelvin to Celsius
 function convertion(val) {
   return (val - 273).toFixed(2);
@@ -36,6 +38,21 @@ button.addEventListener("click", () => {
       city.textContent = nameval;
       temperature.textContent = `${convertion(temperatureVal)} C`;
       sky.textContent = weather;
+
+      // Fetch image from Unsplash API
+      fetch(`${unsplashBaseUrl}${cityName}`, {
+        headers: {
+          Authorization: `Client-ID ${unsplashApiKey}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((imageData) => {
+          const imageUrl = imageData.urls.regular;
+          img.src = imageUrl;
+        })
+        .catch((error) => {
+          console.log("Error fetching image data: ", error);
+        });
 
       // Extract forecast data for the next five days
       for (let i = 0; i < 5; i++) {

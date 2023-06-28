@@ -56,6 +56,12 @@ h1 {
   margin-right: 4px;
 }
 
+img {
+  width: 300px;
+  height: 250px;
+  margin: 20px;
+}
+
 .country-selector input[type="submit"] {
   height: 3rem;
   width: 6rem;
