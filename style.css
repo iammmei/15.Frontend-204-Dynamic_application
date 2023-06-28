@@ -1,32 +1,133 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: rgb(176, 250, 224);
-  margin: auto;
-
-  width: 100%;
-}
-
-.content {
-  background-color: aliceblue;
-}
-img {
-  width: 200px;
-  height: 150px;
+  background: #116396;
 }
 
 .container {
-  display: flex;
   width: 100%;
-  align-content: space-around;
-  flex-direction: column;
-  flex-wrap: wrap;
-  margin-top: 3%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.content {
+  padding: 20px;
+  background: white;
+  border-radius: 2px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fff;
+}
+
+.main {
+  text-align: center;
 }
 
 .country-selector {
-  margin: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.country-selector input[type="text"] {
+  height: 4rem;
+  width: 80%;
+  max-width: 300px;
+  background: #212121;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #c2c2c2;
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.country-selector input[type="submit"] {
+  height: 3rem;
+  width: 6rem;
+  background: #0a67ca;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
+  margin-top: 20px;
+  border: none;
+  border-radius: 2px;
+}
+
+.display {
+  text-align: center;
+  color: #16a864;
+}
+
+.wrapper {
+  margin: 0 5%;
+  background-color: white;
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.wrapper h2 {
+  padding: 5px 0;
+  text-align: center;
+  background: #0548b5;
+  color: white;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.wrapper p {
+  margin: 20px 0;
+  text-align: left;
+  color: #04214c;
+  font-size: 20px;
+}
+
+.wrapper h2 span {
+  font-size: 22px;
+  color: #9beefb;
+}
+
+.wrapper p span {
+  color: #f4780d;
+  font-size: 21px;
+}
+
+table {
+  margin: 20px auto;
+}
+
+table th {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+table td {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 480px) {
+  .country-selector {
+    flex-direction: column;
+  }
+
+  .country-selector input[type="text"] {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
 }
