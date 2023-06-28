@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #116396;
+  background: #a8daf9;
 }
 
 .container {
@@ -56,6 +56,12 @@ h1 {
   margin-right: 4px;
 }
 
+.wrapper p {
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+}
+
 img {
   width: 300px;
   height: 250px;
@@ -88,28 +94,21 @@ img {
 .wrapper h2 {
   padding: 5px 0;
   text-align: center;
-  background: #0548b5;
-  color: white;
+  background: white;
+  color: #a8daf9;
   font-family: sans-serif;
   font-size: 24px;
 }
 
 .wrapper p {
   margin: 20px 0;
-  text-align: left;
+  text-align: center;
   color: #04214c;
   font-size: 20px;
 }
 
-.wrapper h2 span {
-  font-size: 22px;
-  color: #9beefb;
-}
 
-.wrapper p span {
-  color: #f4780d;
-  font-size: 21px;
-}
+
 
 table {
   margin: 20px auto;
