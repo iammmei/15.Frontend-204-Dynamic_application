@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +8,9 @@
 
 body {
   background: #a8daf9;
+  background-image: url("sky.avif");
+  background-repeat:round;
+  font-family: "Libre Baskerville", serif;
 }
 
 .container {
@@ -45,7 +50,7 @@ h1 {
   height: 3rem;
   width: 80%;
   max-width: 300px;
-  background: #212121;
+  background: #0a67ca;
   font-weight: bold;
   font-size: 1rem;
   padding: 10px;
@@ -71,7 +76,7 @@ img {
 .country-selector input[type="submit"] {
   height: 3rem;
   width: 6rem;
-  background: #0a67ca;
+  background: #a8daf9;
   font-weight: bold;
   color: white;
   font-size: 1rem;
