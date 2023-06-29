@@ -147,11 +147,7 @@ td {
   justify-content: center;
 }
 
-@media only screen and (max-width: 480px) {
-  .country-selector {
-    flex-direction: column;
-  }
-
+@media only screen and (max-width: 600px) {
   .country-selector input[type="text"] {
     width: 80%;
     max-width: 80%;
@@ -174,28 +170,14 @@ td {
     border-radius: 14px;
   }
 
-  header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  h1 {
-    font-size: 24px;
-    color: #fff;
-  }
-
-  .main {
-    text-align: center;
-  }
-
   .country-selector {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .country-selector input[type="text"] {
-    height: 3rem;
+    height: 2.5rem;
     width: 80%;
     max-width: 300px;
     background: #0a67ca;
@@ -207,6 +189,21 @@ td {
     border: 2px solid #c2c2c2;
     border-radius: 2px;
     margin-right: 4px;
+    text-align: center;
+  }
+
+  .country-selector input[type="submit"] {
+    display: flex;
+    height: 2.5rem;
+    width: 5rem;
+    align-items: center;
+    justify-content: center;
+    background: #a8daf9;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2px;
   }
 
   .wrapper p {
@@ -223,19 +220,6 @@ td {
     height: 150px;
     margin: 20px;
     border-radius: 10%;
-  }
-
-  .country-selector input[type="submit"] {
-    height: 1rem;
-    width: 3rem;
-    align-items: center;
-    justify-content: center;
-    background: #a8daf9;
-    font-weight: bold;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 2px;
   }
 
   .wrapper h2 {
