@@ -76,15 +76,12 @@ h1 {
   justify-items: center;
   text-align: center;
 }
-p .temperature,
-.sky {
-  color: red;
-}
 
 img {
   width: 200px;
   height: 180px;
   margin: 50px;
+  margin-top: 30px;
   border-radius: 10%;
 }
 
