@@ -16,11 +16,15 @@ body {
 .container {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  margin: auto;
   padding: 10px;
+  height: auto;
 }
 
 .content {
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
   padding: 20px;
   background: white;
   border-radius: 2px;
@@ -34,8 +38,10 @@ header {
 }
 
 h1 {
-  font-size: 24px;
-  color: #fff;
+  margin: 15px;
+  margin-bottom: 30px;
+  font-size: 25px;
+  color: rgb(69, 82, 132);
 }
 
 .main {
@@ -61,6 +67,7 @@ h1 {
   border: 2px solid #c2c2c2;
   border-radius: 2px;
   margin-right: 4px;
+  color: #2ba4c6;
 }
 
 .wrapper p {
@@ -158,7 +165,7 @@ td {
   .container {
     width: 100%;
     max-width: 600px;
-    margin: 0 auto;
+
     padding: 10px;
   }
 
@@ -235,31 +242,6 @@ td {
     margin: 10px;
     text-align: center;
     color: #04214c;
-    font-size: 20px;
-  }
-
-  table {
-    margin: 20px auto;
-  }
-
-  table th {
-    font-weight: bold;
-    font-size: 18px;
-    margin: 10px;
-    border-spacing: 5px;
-  }
-
-  table td {
-    font-size: 16px;
-  }
-
-  th,
-  td {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    padding-left: 30px;
-    padding-right: 40px;
-    align-items: center;
-    justify-content: center;
+    font-size: 17px;
   }
 }
