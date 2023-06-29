@@ -28,7 +28,6 @@ body {
   margin-bottom: 40px;
   padding: 20px;
   background: white;
-  border-radius: 2px;
   width: fit-content;
   border-radius: 14px;
 }
@@ -68,7 +67,7 @@ h1 {
   border: 2px solid #c2c2c2;
   border-radius: 2px;
   margin-right: 4px;
-  color: #2ba4c6;
+  color: rgb(69, 82, 132);
 }
 
 .wrapper p {
@@ -76,14 +75,15 @@ h1 {
   justify-items: center;
   text-align: center;
 }
-
-table {
-  padding: 5px;
+.temperature,
+.sky p {
+  color: #6e8a9b;
 }
+
 img {
   width: 195px;
   height: 170px;
-  margin: 20px;
+  margin: 50px;
   border-radius: 10%;
 }
 
@@ -118,7 +118,7 @@ img {
   padding: 5px 0;
   text-align: center;
   background: white;
-  color: #a8daf9;
+  color: #6e8a9b;
   font-family: sans-serif;
   font-size: 24px;
 }
@@ -156,6 +156,9 @@ td {
 }
 
 @media only screen and (max-width: 600px) {
+  body {
+    background-repeat: round;
+  }
   .country-selector input[type="text"] {
     width: 80%;
     max-width: 80%;
@@ -173,11 +176,10 @@ td {
   .content {
     padding: 20px;
     background: white;
-    border-radius: 2px;
-    width: fit-content;
     border-radius: 14px;
+    width: fit-content;
   }
-
+  border-radius: 14px;
   .country-selector {
     display: flex;
     justify-content: center;
@@ -214,15 +216,6 @@ td {
     border-radius: 2px;
   }
 
-  .wrapper p {
-    align-items: center;
-    justify-items: center;
-    text-align: center;
-  }
-
-  table {
-    padding: 5px;
-  }
   img {
     width: 165px;
     height: 150px;
