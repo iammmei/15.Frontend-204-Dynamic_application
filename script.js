@@ -15,10 +15,28 @@ function convertion(val) {
   return (val - 273).toFixed(2);
 }
 
+// Function to get the day of the week from a date object
+function getDayOfWeek(date) {
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  return daysOfWeek[date.getDay()];
+}
+
 // Function to update the table rows with forecast data
 function updateForecastTable(forecastData) {
   for (let i = 0; i < forecastData.length; i++) {
-    tableRows[i].innerHTML = `<td>${forecastData[i]} C</td>`;
+    const day = getDayOfWeek(new Date()); // Get the current day
+    const forecastDay = getDayOfWeek(
+      new Date(new Date().getTime() + 24 * 60 * 60 * 1000 * (i + 1))
+    ); // Get the forecast day
+    tableRows[i].innerHTML = `<td>${forecastDay} ${forecastData[i]} °C </td>`;
   }
 }
 
