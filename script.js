@@ -32,14 +32,16 @@ function getDayOfWeek(date) {
 // Function to update the table rows with forecast data
 function updateForecastTable(forecastData) {
   for (let i = 0; i < forecastData.length; i++) {
-    const day = getDayOfWeek(new Date()); // Get the current day
     const forecastDay = getDayOfWeek(
       new Date(new Date().getTime() + 24 * 60 * 60 * 1000 * (i + 1))
     ); // Get the forecast day
-    tableRows[i].innerHTML = `<td>${forecastDay} ${forecastData[i]} °C </td>`;
+    const minTemperature = Math.min(...forecastData[i]);
+    const maxTemperature = Math.max(...forecastData[i]);
+    tableRows[
+      i
+    ].innerHTML = `<td>${forecastDay}</td><td>Min: ${minTemperature}°C<br>Max: ${maxTemperature}°C</td>`;
   }
 }
-
 button.addEventListener("click", () => {
   const cityName = inputvalue.value;
   const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
@@ -49,12 +51,11 @@ button.addEventListener("click", () => {
     .then((data) => {
       const nameval = data.city.name;
       const weather = data.list[0].weather[0].description;
-      const temperatureVal = data.list[0].main.temp;
       const forecastData = [];
 
       // Update current weather information
       city.textContent = nameval;
-      temperature.textContent = `${convertion(temperatureVal)} C`;
+      temperature.textContent = `${convertion(data.list[0].main.temp)} C`;
       sky.textContent = weather;
 
       // Fetch image from Unsplash API
@@ -74,12 +75,21 @@ button.addEventListener("click", () => {
 
       // Extract forecast data for the next five days
       for (let i = 0; i < 5; i++) {
-        const forecastTemperature = data.list[i * 8].main.temp;
-        forecastData.push(convertion(forecastTemperature));
+        const forecastTemperatures = data.list
+          .slice(i * 8, (i + 1) * 8)
+          .map((item) => convertion(item.main.temp));
+        forecastData.push(forecastTemperatures);
       }
 
       // Update the forecast table
       updateForecastTable(forecastData);
+
+      // Calculate overall minimum and maximum temperatures
+      const overallMinTemperature = Math.min(...forecastData.flat());
+      const overallMaxTemperature = Math.max(...forecastData.flat());
+
+      // Update main weather information with overall temperature range
+      temperature.textContent = `${overallMinTemperature}°C - ${overallMaxTemperature}°C`;
     })
     .catch((error) => {
       console.log("Error fetching weather data: ", error);

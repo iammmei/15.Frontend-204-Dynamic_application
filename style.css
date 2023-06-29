@@ -73,9 +73,10 @@ table {
   padding: 5px;
 }
 img {
-  width: 175px;
-  height: 150px;
+  width: 195px;
+  height: 170px;
   margin: 20px;
+  border-radius: 10%;
 }
 
 .country-selector input[type="submit"] {
@@ -103,7 +104,6 @@ img {
   margin: 0 5%;
   background-color: white;
   border-radius: 2px;
-  padding: 20px;
 }
 
 .wrapper h2 {
@@ -116,7 +116,7 @@ img {
 }
 
 .wrapper p {
-  margin: 20px 0;
+  margin: 10px;
   text-align: center;
   color: #04214c;
   font-size: 20px;
@@ -135,6 +135,19 @@ table th {
 
 table td {
   font-size: 16px;
+}
+
+th,
+td {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 40px;
+  align-items: center;
+  justify-content: center;
+}
+.text-center {
+  text-align: center;
 }
 
 @media only screen and (max-width: 480px) {
