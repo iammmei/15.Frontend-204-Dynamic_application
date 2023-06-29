@@ -146,9 +146,6 @@ td {
   align-items: center;
   justify-content: center;
 }
-.text-center {
-  text-align: center;
-}
 
 @media only screen and (max-width: 480px) {
   .country-selector {
@@ -156,9 +153,129 @@ td {
   }
 
   .country-selector input[type="text"] {
-    width: 100%;
-    max-width: 100%;
+    width: 80%;
+    max-width: 80%;
     margin-right: 0;
     margin-bottom: 10px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .content {
+    padding: 20px;
+    background: white;
+    border-radius: 2px;
+    width: fit-content;
+    border-radius: 14px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .main {
+    text-align: center;
+  }
+
+  .country-selector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .country-selector input[type="text"] {
+    height: 3rem;
+    width: 80%;
+    max-width: 300px;
+    background: #0a67ca;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    border: 2px solid #c2c2c2;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+
+  .wrapper p {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+  }
+
+  table {
+    padding: 5px;
+  }
+  img {
+    width: 165px;
+    height: 150px;
+    margin: 20px;
+    border-radius: 10%;
+  }
+
+  .country-selector input[type="submit"] {
+    height: 1rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    background: #a8daf9;
+    font-weight: bold;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 2px;
+  }
+
+  .wrapper h2 {
+    padding: 5px 0;
+    text-align: center;
+    background: white;
+    color: #a8daf9;
+    font-family: sans-serif;
+    font-size: 24px;
+  }
+
+  .wrapper p {
+    margin: 10px;
+    text-align: center;
+    color: #04214c;
+    font-size: 20px;
+  }
+
+  table {
+    margin: 20px auto;
+  }
+
+  table th {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px;
+    border-spacing: 5px;
+  }
+
+  table td {
+    font-size: 16px;
+  }
+
+  th,
+  td {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: center;
   }
 }

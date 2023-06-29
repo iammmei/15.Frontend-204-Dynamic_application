@@ -39,7 +39,7 @@ function updateForecastTable(forecastData) {
     const maxTemperature = Math.max(...forecastData[i]);
     tableRows[
       i
-    ].innerHTML = `<td>${forecastDay}</td><td>Min: ${minTemperature}°C<br>Max: ${maxTemperature}°C</td>`;
+    ].innerHTML = `<td>${forecastDay}</td><td> min: ${minTemperature}°C<br> max: ${maxTemperature}°C</td>`;
   }
 }
 button.addEventListener("click", () => {
