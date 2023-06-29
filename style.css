@@ -76,14 +76,14 @@ h1 {
   justify-items: center;
   text-align: center;
 }
-.temperature,
-.sky p {
-  color: #6e8a9b;
+p .temperature,
+.sky {
+  color: red;
 }
 
 img {
-  width: 195px;
-  height: 170px;
+  width: 225px;
+  height: 190px;
   margin: 50px;
   border-radius: 10%;
 }
@@ -106,7 +106,7 @@ img {
 
 .display {
   text-align: center;
-  color: #0a67ca;
+  color: rgb(69, 82, 132);
 }
 
 .wrapper {
@@ -127,7 +127,8 @@ img {
 .wrapper p {
   margin: 10px;
   text-align: center;
-  color: #04214c;
+  color: rgb(69, 82, 132);
+
   font-size: 20px;
 }
 
@@ -219,9 +220,10 @@ td {
   }
 
   img {
-    width: 170px;
-    height: 150px;
+    width: 245px;
+    height: 200px;
     margin: 45px;
+    margin-top: 30px;
     border-radius: 10%;
   }
 

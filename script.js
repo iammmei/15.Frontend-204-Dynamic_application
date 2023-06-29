@@ -42,9 +42,25 @@ function updateForecastTable(forecastData) {
     ].innerHTML = `<td>${forecastDay}</td><td> min: ${minTemperature}°C<br> max: ${maxTemperature}°C</td>`;
   }
 }
-button.addEventListener("click", () => {
-  const cityName = inputvalue.value;
-  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
+
+function handleButtonClick(e) {
+  e.preventDefault();
+  const city = inputvalue.value;
+  showWeatherData(city);
+}
+
+function handleEnterKey(e) {
+  if (e.code === "Enter") {
+    const city = e.target.value;
+    showWeatherData(city);
+  }
+}
+
+button.addEventListener("click", handleButtonClick);
+inputvalue.addEventListener("keyup", handleEnterKey);
+
+function showWeatherData(city) {
+  const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
   fetch(apiUrl)
     .then((res) => res.json())
@@ -55,11 +71,11 @@ button.addEventListener("click", () => {
 
       // Update current weather information
       city.textContent = nameval;
-      temperature.textContent = `${convertion(data.list[0].main.temp)} C`;
+      temperature.textContent = ""; // Clear previous temperature content
       sky.textContent = weather;
 
       // Fetch image from Unsplash API
-      fetch(`${unsplashBaseUrl}${cityName}`, {
+      fetch(`${unsplashBaseUrl}${city}`, {
         headers: {
           Authorization: `Client-ID ${unsplashApiKey}`,
         },
@@ -89,9 +105,16 @@ button.addEventListener("click", () => {
       const overallMaxTemperature = Math.max(...forecastData.flat());
 
       // Update main weather information with overall temperature range
-      temperature.textContent = `${overallMinTemperature}°C - ${overallMaxTemperature}°C`;
+      temperature.textContent = `min: ${overallMinTemperature}°C 	  
+       ~ ◕‿◕ ~
+           max: ${overallMaxTemperature}°C`;
+
+      // Get the current date and update the dayname tag
+      const currentDate = new Date();
+      const dayName = getDayOfWeek(currentDate);
+      document.querySelector(".dayname").textContent = dayName;
     })
     .catch((error) => {
       console.log("Error fetching weather data: ", error);
     });
-});
+}
