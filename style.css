@@ -23,8 +23,9 @@ body {
 
 .content {
   margin-top: 40px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 35px;
+  margin-right: 35px;
+  margin-bottom: 40px;
   padding: 20px;
   background: white;
   border-radius: 2px;
