@@ -39,7 +39,7 @@ header {
 
 h1 {
   margin: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   font-size: 25px;
   color: rgb(69, 82, 132);
 }
@@ -179,7 +179,7 @@ td {
     border-radius: 14px;
     width: fit-content;
   }
-  border-radius: 14px;
+
   .country-selector {
     display: flex;
     justify-content: center;
@@ -200,6 +200,7 @@ td {
     border-radius: 2px;
     margin-right: 4px;
     text-align: center;
+    color: rgb(69, 82, 132);
   }
 
   .country-selector input[type="submit"] {
@@ -217,9 +218,9 @@ td {
   }
 
   img {
-    width: 165px;
+    width: 170px;
     height: 150px;
-    margin: 20px;
+    margin: 45px;
     border-radius: 10%;
   }
 
