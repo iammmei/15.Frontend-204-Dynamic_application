@@ -1,6 +1,6 @@
 const inputvalue = document.getElementById("cityinput");
 const button = document.getElementById("btn");
-const city = document.querySelector(".cityOutput");
+const cityOutput = document.querySelector(".cityOutput");
 const img = document.querySelector("img");
 const temperature = document.querySelector(".temperature");
 const sky = document.querySelector(".sky");
@@ -70,7 +70,7 @@ function showWeatherData(city) {
       const forecastData = [];
 
       // Update current weather information
-      city.textContent = nameval;
+      cityOutput.textContent = nameval;
       temperature.textContent = ""; // Clear previous temperature content
       sky.textContent = weather;
 
